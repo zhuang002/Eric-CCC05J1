@@ -24,17 +24,15 @@ public class Main {
 		planB+=evening*35+weekend*25;
 		
 		int remainder = planA%100;
-		String sRemainder = "";
-		if (remainder>0) sRemainder += remainder;
-		else sRemainder = "00";
-		System.out.println("Plan A costs "+(planA/100)+"."+ sRemainder);
+		
+		// if (condition) {...}
+		// (condition)?value1:value2
+		System.out.println("Plan A costs "+(planA/100)+"."+ ((remainder==0)?"00":remainder));
 		
 		
 		remainder = planB%100;
-		sRemainder = "";
-		if (remainder>0) sRemainder += remainder;
-		else sRemainder = "00";
-		System.out.println("Plan B costs "+(planB/100)+"."+ sRemainder);
+		
+		System.out.println("Plan B costs "+(planB/100)+"."+ ((remainder==0)?"00":remainder));
 		
 		if (planA<planB) {
 			System.out.println("Plan A is cheapest.");
